@@ -6,8 +6,6 @@ import rootSaga from './sagas';
 declare global {
   interface Window {
     __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
-    AudioContext?: any;
-    webkitAudioContext: any;
   }
 }
 

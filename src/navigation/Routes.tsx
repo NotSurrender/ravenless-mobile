@@ -12,7 +12,7 @@ const AppNavigation: FC = () => {
   return (
     <AppearanceProvider>
       <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
-        {authorized ? <AuthStack /> : <AppDrawers />}
+        {authorized ? <AppDrawers /> : <AuthStack />}
       </NavigationContainer>
     </AppearanceProvider>
   );

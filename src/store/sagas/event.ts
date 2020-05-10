@@ -49,7 +49,7 @@ function* fetchEventList() {
 function* fetchEvent() {
   try {
     yield delay(1000);
-    yield put(AC.loadEventSuccessAction(DATA));
+    // yield put(AC.loadEventSuccessAction([]));
   } catch (error) {
     yield put(AC.loadEventErrorAction(error));
   }

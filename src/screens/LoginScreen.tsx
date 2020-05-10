@@ -6,7 +6,7 @@ import { AuthNavProps } from '../navigation/AuthParamList';
 
 const LoginScreen: FC<AuthNavProps<'LoginScreen'>> = ({ navigation }) => {
   const handleNavigate = () => {
-    navigation.navigate('RegisterScreen');
+    navigation.navigate('RegistrationScreen');
   };
 
   return <Login onPress={handleNavigate} />;

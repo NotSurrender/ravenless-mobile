@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import LoginScreen from '../screens/LoginScreen';
-import RegisterScreen from '../screens/RegisterScreen';
+import RegistrationScreen from '../screens/RegistrationScreen';
 
 import { AuthParamList } from './AuthParamList';
 
@@ -22,8 +22,8 @@ const AuthStack: FC = () => {
         options={{
           headerTitle: 'Регистрация'
         }}
-        name="RegisterScreen"
-        component={RegisterScreen}
+        name="RegistrationScreen"
+        component={RegistrationScreen}
       />
     </Stack.Navigator>
   );
