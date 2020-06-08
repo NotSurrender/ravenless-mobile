@@ -15,7 +15,7 @@ const clubDefaultState: ClubState = {
   loading: false
 };
 
-const club = (state = clubDefaultState, action: ClubActionTypes) => {
+export const club = (state = clubDefaultState, action: ClubActionTypes) => {
   switch (action.type) {
     case actions.LOAD_CLUB_LIST_REQUEST:
       return { ...state, loading: true };
@@ -24,8 +24,6 @@ const club = (state = clubDefaultState, action: ClubActionTypes) => {
       return { ...state, list: action.data, loading: false };
 
     default:
-      return { ...state };
+      return state;
   }
 };
-
-export default club;

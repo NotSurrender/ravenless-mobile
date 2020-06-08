@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
 
-import AppActivityIndicator from '../components/AppActivityIndicator';
+import { Preloader } from '../components/Preloader';
 import Club from '../components/Club';
 
 import { ClubNavProps } from '../navigation/ClubParamList';
@@ -12,7 +12,7 @@ const ClubScreen: FC<ClubNavProps<'Club'>> = () => {
   const data = useSelector((state: AppState) => state.club.clubScreen);
 
   if (loading) {
-    return <AppActivityIndicator />;
+    return <Preloader />;
   }
 
   return <Club data={data} />;

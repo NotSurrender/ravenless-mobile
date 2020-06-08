@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import LoginScreen from '../screens/LoginScreen';
-import RegistrationScreen from '../screens/RegistrationScreen';
+import { LoginScreen } from '../screens/LoginScreen';
+import { RegistrationScreen } from '../screens/RegistrationScreen';
 
 import { AuthParamList } from './AuthParamList';
 
@@ -13,7 +13,7 @@ const AuthStack: FC = () => {
     <Stack.Navigator initialRouteName="LoginScreen">
       <Stack.Screen
         options={{
-          headerTitle: 'Логин'
+          headerTitle: 'Вход'
         }}
         name="LoginScreen"
         component={LoginScreen}

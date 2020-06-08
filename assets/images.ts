@@ -1,6 +1,5 @@
-const images = {
+export const images = {
   vitya: require('./vitya.jpeg'),
-  artem: require('./artem.jpeg')
+  artem: require('./artem.jpeg'),
+  logo: require('./logo.png')
 };
-
-export default images;

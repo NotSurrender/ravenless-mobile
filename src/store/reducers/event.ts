@@ -15,7 +15,7 @@ const eventDefaultState: EventState = {
   loading: false
 };
 
-const event = (state = eventDefaultState, action: EventActionTypes): EventState => {
+export const event = (state = eventDefaultState, action: EventActionTypes): EventState => {
   switch (action.type) {
     case actions.LOAD_EVENT_LIST_REQUEST:
       return { ...state, loading: true };
@@ -27,8 +27,6 @@ const event = (state = eventDefaultState, action: EventActionTypes): EventState 
       return { ...state, list: [] };
 
     default:
-      return { ...state };
+      return state;
   }
 };
-
-export default event;

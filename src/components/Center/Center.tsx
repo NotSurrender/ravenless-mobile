@@ -1,9 +1,7 @@
 import React, { FC } from 'react';
-import classes from './styles';
 import { View } from 'react-native';
+import { styles } from './styles';
 
-const Center: FC = ({ children }) => {
-  return <View style={classes.center}>{children}</View>;
+export const Center: FC = ({ children }) => {
+  return <View style={styles.center}>{children}</View>;
 };
-
-export default Center;

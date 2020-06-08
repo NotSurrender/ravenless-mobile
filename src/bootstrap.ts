@@ -1,14 +1,12 @@
 import * as Font from 'expo-font';
 
-const bootstrap = async () => {
+export const bootstrap = async () => {
   try {
     await Font.loadAsync({
-      'open-bold': require('../assets/fonts/OpenSans-Bold.ttf'),
-      'open-regular': require('../assets/fonts/OpenSans-Regular.ttf')
+      Roboto: require('native-base/Fonts/Roboto.ttf'),
+      Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf')
     });
   } catch (error) {
     console.log(error);
   }
 };
-
-export default bootstrap;

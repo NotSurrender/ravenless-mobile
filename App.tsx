@@ -1,11 +1,11 @@
 import React, { FC, useState } from 'react';
+import { store } from './src/store';
+import { bootstrap } from './src/bootstrap';
+
 import { AppLoading } from 'expo';
+import { Container } from 'native-base';
 import { Provider } from 'react-redux';
-import store from './src/store';
-
 import AppNavigation from './src/navigation/Routes';
-
-import bootstrap from './src/bootstrap';
 
 const App: FC = () => {
   const [isReady, setIsReady] = useState<boolean>(false);
@@ -22,7 +22,9 @@ const App: FC = () => {
 
   return (
     <Provider store={store}>
-      <AppNavigation />
+      <Container>
+        <AppNavigation />
+      </Container>
     </Provider>
   );
 };

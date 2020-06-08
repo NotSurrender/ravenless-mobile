@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useFocusEffect } from '@react-navigation/native';
 import { loadEventList, clearEventList } from '../store/AC/event';
 
-import AppActivityIndicator from '../components/AppActivityIndicator';
+import { Preloader } from '../components/Preloader';
 import EventList from '../components/EventList';
 
 import { AppState } from '../store';
@@ -24,7 +24,7 @@ const EventListScreen: FC = () => {
   );
 
   if (loading) {
-    return <AppActivityIndicator />;
+    return <Preloader />;
   }
 
   return <EventList data={data} />;
